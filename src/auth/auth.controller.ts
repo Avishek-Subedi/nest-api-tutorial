@@ -11,11 +11,11 @@ export class AuthController {
 
   @Post('signup') //post/signup/auth
   signup() {
-    return { title: 'signed in', id: 123, 'is loggedIn': false };
+    return this.authService.signup();
   }
 
   @Post('signin')
   signin() {
-    return 'I am signed in';
+    return this.authService.signin();
   }
 }
